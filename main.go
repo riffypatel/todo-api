@@ -7,7 +7,6 @@ import (
 	"todo-api/handlers"
 	"todo-api/middleware"
 
-
 	"github.com/gorilla/mux"
 )
 
