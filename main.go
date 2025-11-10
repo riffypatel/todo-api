@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/riffypatel/github.com/riffypatel/todo-api/handlers"
-	"github.com/riffypatel/github.com/riffypatel/todo-api/middleware"
+	"github.com/riffypatel/todo-api/handlers"
+	"github.com/riffypatel/todo-api/middleware"
 
 	"github.com/gorilla/mux"
 )
