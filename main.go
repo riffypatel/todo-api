@@ -2,6 +2,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 
 	"todo-api/handlers"
 	"todo-api/middleware"
@@ -24,5 +25,9 @@ func main() {
 	api.HandleFunc("/{id}", handlers.DeleteTodo).Methods("DELETE")
 
 	log.Println("Server running on port 8080")
-	log.Fatal(http.ListenAndServe(":8080", router))
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	log.Fatal(http.ListenAndServe(":"+port, router))
 }
