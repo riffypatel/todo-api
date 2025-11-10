@@ -1,4 +1,4 @@
-module todo-api
+module github.com/riffypatel/todo-api
 
 go 1.25.1
 

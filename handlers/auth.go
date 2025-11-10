@@ -5,9 +5,8 @@ import (
 	"net/http"
 	"time"
 
-	"todo-api/models"
-
 	"github.com/golang-jwt/jwt/v5"
+	"github.com/riffypatel/todo-api/models"
 	"golang.org/x/crypto/bcrypt"
 )
 

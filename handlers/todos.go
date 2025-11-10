@@ -4,11 +4,9 @@ import (
 	"encoding/json"
 	"net/http"
 	"strconv"
-	"todo-api/models"
 
-	
 	"github.com/gorilla/mux"
-
+	"github.com/riffypatel/todo-api/models"
 )
 
 var todos []models.Todo
@@ -56,4 +54,3 @@ func DeleteTodo(w http.ResponseWriter, r *http.Request) {
 	}
 	http.Error(w, "Todo not found", http.StatusNotFound)
 }
-

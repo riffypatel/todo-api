@@ -4,8 +4,8 @@ import (
 	"context"
 	"net/http"
 	"strings"
-    "github.com/golang-jwt/jwt/v5"
 
+	"github.com/golang-jwt/jwt/v5"
 )
 
 var JwtKey = []byte("secret_key")
@@ -27,13 +27,11 @@ func JWTAuth(next http.Handler) http.Handler {
 
 		if err != nil || !token.Valid {
 			http.Error(w, "Invalid token", http.StatusUnauthorized)
-			return 
+			return
 		}
-
 
 		ctx := context.WithValue(r.Context(), "user", claims)
 		next.ServeHTTP(w, r.WithContext(ctx))
 	})
-
 
 }

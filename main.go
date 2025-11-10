@@ -1,11 +1,12 @@
 package main
+
 import (
 	"log"
 	"net/http"
 	"os"
 
-	"todo-api/handlers"
-	"todo-api/middleware"
+	"github.com/riffypatel/github.com/riffypatel/todo-api/handlers"
+	"github.com/riffypatel/github.com/riffypatel/todo-api/middleware"
 
 	"github.com/gorilla/mux"
 )
@@ -13,7 +14,7 @@ import (
 func main() {
 	router := mux.NewRouter()
 
-	router.HandleFunc("/register",handlers.Register).Methods("POST")
+	router.HandleFunc("/register", handlers.Register).Methods("POST")
 	router.HandleFunc("/login", handlers.Login).Methods("POST")
 
 	api := router.PathPrefix("/todos").Subrouter()
